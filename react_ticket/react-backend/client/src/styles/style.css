@@ -1,0 +1,127 @@
+/*-----------------------------------------------------------------------------------
+    Template Name:             Personee Blog Psd
+    Template URI:              ....................................
+    Description:               ....................................
+    CoDer :                    Kaniz Afroza Mou. 
+    CoDer's Site URL:          http://www.designbds.com/am/
+	Coder's facebook account:  https://www.facebook.com/afroza.mou.7
+	Coder's mail:              afroza969@gmail.com
+	skype ID:                  afroza.mou
+    Version:                   1.0
+-----------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------*/
+/*    1.     Default CSS
+/*-----------------------------------------------------------------------------------*/
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'Droid Sans', sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+a:hover, li {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.main_wrapper {
+    background-color: #ededed;
+}
+a:focus {
+    outline: none;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+
+/* this code is for float and overflow */
+.f_left {
+    float: left;
+}
+.f_right {
+    float: right;
+}
+.fix {
+    overflow: hidden;
+}
+
+/* this code is for padding and headings */
+.section_padding {
+    padding: 70px 0;
+}
+.padding_bottom {
+    padding-bottom: 70px;
+}
+.padding_top {
+    padding-top: 70px;
+}
+.blog_headings {
+    font-size: 26px;
+    padding: 30px 0 15px;
+}
+.blog_headings a {
+    color: #303030;
+}
+.widget_padding {
+    padding: 40px 0;
+}
+.widget_padding_botttm {
+    padding-bottom: 40px;
+}
+.widget_headings {
+    font-weight: 700;
+    font-size: 16px;
+    color: #565656;
+    padding: 40px 0 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.sub_widget_headings {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+.sub_widget_headings a {
+    color: #303030;
+}
+
+/* all transition code is here */
+.header_bottom .mainmenu ul.nav.navbar-nav li a, .header_social_icon form input[type="search"], .hero_area .owl-nav div, .single_blog_content, .about_social a i, .single_widget_catagories li a, .single_widget_archive ul li a, .pagination_area ul li a, .single_instagram:after, .single_footer a i, .single_blog_footer p a i, .scroll p, .scroll_top i, .single_widget_form a i, .single_blog_page_author_social a i {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    -moz-transition: 0.5s;
+}
+
+/* this code is for hover */
+.single_footer a i:hover, .about_social a i:hover, .single_blog_page_author_social a i:hover {
+    color: #a6a6a6;
+}
+.single_blog:hover .single_blog_content {
+    box-shadow: 0 0 18px rgba(0, 0, 0,.11);
+}
+.single_blog_footer span a i:hover {
+    color: #2b2b2b;
+}
+.pagination_area ul li a:hover, .single_widget_archive ul li a:hover, .single_widget_catagories li a:hover, .scroll:hover p {
+    color: #2ecc71;
+}
+.single_blog_footer p a:hover i {
+    margin-left: 15px;
+}
+.scroll_top i:hover {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71;
+    color: #fff;
+}
+.single_widget_form:hover a i {
+    color: #2ecc71;
+}
