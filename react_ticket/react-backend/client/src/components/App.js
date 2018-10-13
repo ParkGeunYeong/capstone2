@@ -1,25 +1,15 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from '../pages/Home'
+import Test from '../pages/Test'
 
-class App extends Component {
-  state = {users: []}
-
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-      </div>
-    );
-  }
-}
+const App = () => (
+  <React.Fragment>
+    <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route path="/test" component={Test}/>
+    </Switch>
+  </React.Fragment>
+)
 
 export default App;

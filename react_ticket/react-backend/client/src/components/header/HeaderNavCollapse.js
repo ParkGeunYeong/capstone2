@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class HeaderNavCollapse extends Component {
     render() {
         return (
             <div className="collapse navbar-collapse">
                 <ul className="nav navbar-nav">
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/">공연목록</a></li>
-                    <li><a href="/">티켓거래</a></li>
-                    <li><a href="/">CONTACT</a></li>
+                    <li><Link to="/">HOME</Link></li>
+                    <li><Link to="/test">공연목록</Link></li>
+                    <li><Link to="/">티켓거래</Link></li>
+                    <li><Link to="/">CONTACT</Link></li>
                 </ul>
             </div>
         );
