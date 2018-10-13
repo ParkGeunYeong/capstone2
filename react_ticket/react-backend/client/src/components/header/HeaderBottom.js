@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import HeaderNavSocial from './HeaderNavSocial';
-import HeaderNavCollapse from './HeaderNavCollapse';
+import HeaderMainMenu from './HeaderMainMenu';
+import HeaderSocialIcon from './HeaderSocialIcon'
 
 class HeaderBottom extends Component {
     render() {
@@ -8,10 +8,10 @@ class HeaderBottom extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 col-sm-7">
-                        <div className="mainmenu">
-                            <HeaderNavSocial/>
-                            <HeaderNavCollapse/>
-                        </div>
+                        <HeaderMainMenu/>
+                    </div>
+                    <div className="col-md-4 col-sm-5">
+                        <HeaderSocialIcon/>
                     </div>
                 </div>
             </div>
