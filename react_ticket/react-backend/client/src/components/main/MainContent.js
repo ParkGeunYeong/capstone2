@@ -4,10 +4,12 @@ import SingleBlog from './SingleBlog'
 class MainContent extends Component {
     render() {
         return (
-            <div className="col-md-6 col-sm-6">
-                <SingleBlog/>
-                <SingleBlog/>
-                <SingleBlog/>
+            <div className={this.props.direction}>
+                <div className="col-md-6 col-sm-6">
+                    <SingleBlog/>
+                    <SingleBlog/>
+                    <SingleBlog/>
+                </div>
             </div>
         );
     }

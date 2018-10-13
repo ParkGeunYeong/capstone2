@@ -9,9 +9,8 @@ class MainWrapper extends Component {
                     <div className="row">
                         <div className="col-md-12 col-sm-12 col-xs-12">
                             <div className="blog_left_content">
-                                <div className="main_content_left">
-                                    <MainContent/>
-                                </div>
+                                <MainContent direction="main_content_left"/>
+                                <MainContent direction="main_content_right"/>
                             </div>
                         </div>
                     </div>
