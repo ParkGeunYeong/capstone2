@@ -187,11 +187,21 @@ textarea:focus, input:focus{
     background-color: transparent;
     color: #3fcf7b;
 }
+.mainmenu.navbar {
+    border:none;
+    min-height: auto;
+    margin-bottom: 0;
+    background: none;
+}
+.mainmenu.navbar-default{
+    background-color: none;
+}
 .header_bottom .nav > li > a:focus,
 .nav > li > a:hover {
     background-color: transparent;
     text-decoration: none;
     outline: none;
+    position: none;
 }
 .header_social_icon {
     overflow: hidden;
