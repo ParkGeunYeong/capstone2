@@ -41,7 +41,7 @@ class HeroArea extends Component {
                                 <OwlCarousel 
                                     className="hero_area_list hero_effect"
                                     items="1"
-                                    margin="0"
+                                    margin={0}
                                     autoplay
                                     nav
                                     dots={false}
