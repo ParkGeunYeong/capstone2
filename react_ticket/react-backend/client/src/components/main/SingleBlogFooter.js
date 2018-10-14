@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SingleBlogFooterIcon from './SingleBlogFooterIcon';
 
 class SingleBlogFooter extends Component {
     render() {
@@ -7,11 +8,8 @@ class SingleBlogFooter extends Component {
                 <p><a href="single_blog.html">Continue Reading <i className="fa fa-long-arrow-right"></i> </a></p>
                 <span className="footer_social">
                     <span className="footer_share">Share :</span>
-                    <a href="/" data-toggle="tooltip" data-placement="top" title="twitter"><i className="fa fa-twitter"></i></a>
-                    <a href="/" data-toggle="tooltip" data-placement="top" title="google-plus"><i className="fa fa-google-plus"></i></a>
-                    <a href="/" data-toggle="tooltip" data-placement="top" title="tumblr"><i className="fa fa-tumblr"></i></a>
-                    <a href="/" data-toggle="tooltip" data-placement="top" title="linkedin"><i className="fa fa-linkedin"></i></a>
-                    <a href="/" data-toggle="tooltip" data-placement="top" title="pinterest"><i className="fa fa-pinterest-p"></i></a>
+                        <SingleBlogFooterIcon SBD_cName="fa fa-twitter"/>
+                        <SingleBlogFooterIcon SBD_cName="fa fa-google-plus"/>
                 </span>
             </div>
         );
