@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import HeaderNavToggle from './HeaderNavToggle';
 import HeaderNavCollapse from './HeaderNavCollapse';
+import { Navbar } from 'react-bootstrap'
 
 class HeaderMainMenu extends Component {
     render() {
         return (
-            <div className="mainmenu">
+            <Navbar className="mainmenu">
                 <HeaderNavToggle/>
                 <HeaderNavCollapse/>
-            </div>
+            </Navbar>
         );
     }
 }

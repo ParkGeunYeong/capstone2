@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "instafeed": "^2.0.0",
     "jquery": "^3.3.1",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
@@ -10,7 +11,8 @@
     "react-owl-carousel": "^2.3.1",
     "react-responsive-carousel": "^3.1.43",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.0.4"
+    "react-scripts": "2.0.4",
+    "venobox": "^1.8.5"
   },
   "scripts": {
     "start": "react-scripts start",
