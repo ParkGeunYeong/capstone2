@@ -113,7 +113,7 @@ textarea:focus, input:focus{
 }
 
 /* all transition code is here */
-.header_bottom .mainmenu ul.nav.navbar-nav li a, .header_social_icon form input[type="search"], .hero_area .owl-nav div, .single_blog_content, .about_social a i, .single_widget_catagories li a, .single_widget_archive ul li a, .pagination_area ul li a, .single_instagram:after, .single_footer a i, .single_blog_footer p a i, .scroll p, .scroll_top i, .single_widget_form a i, .single_blog_page_author_social a i {
+.header_bottom .mainmenu ul.nav.navbar-nav li a, .header_social_icon form input[type="search"], .hero_area .owl-nav button i, .single_blog_content, .about_social a i, .single_widget_catagories li a, .single_widget_archive ul li a, .pagination_area ul li a, .single_instagram:after, .single_footer a i, .single_blog_footer p a i, .scroll p, .scroll_top i, .single_widget_form a i, .single_blog_page_author_social a i {
     transition: 0.5s;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -342,7 +342,9 @@ ul.sub-menu {
     color: #4e4e4e;
     margin-right: 10px;
 }
-.hero_area .owl-nav button {
+.hero_area .owl-carousel .owl-nav button.owl-prev,
+.hero_area .owl-carousel .owl-nav button.owl-next,
+.hero_area .owl-carousel button.owl-dot {
     position: absolute;
     top: 50%;
     color: #2d2d2d;
@@ -356,6 +358,7 @@ ul.sub-menu {
     opacity: 0.80;
     margin-top: -15px;
     font-size: 20px;
+    outline: none;
 }
 .hero_area .owl-nav .owl-prev {
     left: 0;
@@ -364,7 +367,7 @@ ul.sub-menu {
     right: 0;
     left: auto;
 }
-.hero_area .owl-nav div:hover {
+.hero_area .owl-nav button:hover i {
     color: #2ecc71;
 }
 
