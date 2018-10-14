@@ -9,7 +9,7 @@ class HeaderNavCollapse extends Component {
                     <NavItem href = "../">HOME</NavItem>
                     <NavItem href = "/test">공연목록</NavItem>
                     <NavItem href = "#">티켓거래</NavItem>
-                    <NavItem href = "#">CONTACT</NavItem>
+                    <NavItem href = "#">마이페이지</NavItem>
                 </Nav>
             </Navbar.Collapse>
         );
