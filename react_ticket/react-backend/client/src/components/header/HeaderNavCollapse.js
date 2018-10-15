@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Link } from 'react-router-dom';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
 class HeaderNavCollapse extends Component {
     render() {
         return (
             <Navbar.Collapse>
                 <Nav>
-                    <NavItem href = "../">HOME</NavItem>
-                    <NavItem href = "/test">공연목록</NavItem>
-                    <NavItem href = "#">티켓거래</NavItem>
-                    <NavItem href = "#">마이페이지</NavItem>
+                    <NavItem componentClass={Link} href="/" to="/">Home</NavItem>
+                    <NavItem componentClass={Link} href="/test" to="/test">공연목록</NavItem>
+                    <NavItem componentClass={Link} href="/" to="/">티켓거래</NavItem>
+                    <NavItem componentClass={Link} href="/" to="/">마이페이지</NavItem>
                 </Nav>
             </Navbar.Collapse>
         );

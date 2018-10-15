@@ -80,6 +80,14 @@ textarea:focus, input:focus{
 .padding_bottom {
     padding-bottom: 70px;
 }
+/* ============== this code is for concertlist page============== */
+.row-bottom-padding {
+    padding-bottom: 50px;
+}
+.concert-name {
+    padding-bottom: 15px;
+}
+/* ============== ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ ============== */
 .padding_top {
     padding-top: 70px;
 }
@@ -2014,6 +2022,15 @@ body.preloader_active {
     .single_blog_content.single_blog_page_comments_lists h2 {
         text-align: center;
     }
+    /* ============== this code is for concertlist page============== */
+    .row-bottom-padding {
+        padding-bottom: 50px;
+    }
+    .concert-name {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+    /* ============== ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ ============== */
 }
 /* ============================================
                 For large mobile

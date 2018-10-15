@@ -1,11 +1,10 @@
 import React from 'react'
 import PageTemplate from '../components/base/PageTemplate';
-import HeroArea from '../components/slide/HeroArea';
-import MainWrapper from '../components/main/MainWrapper';
+import ConcertListWrapper from '../components/concertlist/ConcertListWrapper'
 
 const Main = () => (
     <PageTemplate>
-        <p>fdsfsdf</p>
+        <ConcertListWrapper/>
     </PageTemplate>
 )
 
