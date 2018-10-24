@@ -1,11 +1,16 @@
 import React from 'react';
 import App from './components/App';
-import { BrowserRouter } from 'react-router-dom'; 
+import { BrowserRouter } from 'react-router-dom';
+
+import store from './store';
+import { Provider } from 'react-redux';
 
 const Root = () => (
-    <BrowserRouter>
-        <App/>
-    </BrowserRouter>
+    <Provider store={store}>
+        <BrowserRouter>
+            <App/>
+        </BrowserRouter>
+    </Provider>
 )
 
 export default Root

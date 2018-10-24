@@ -1,33 +1,38 @@
+// [LOAD PACKAGES]
 var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
 
-var indexRouter = require('./routes/index.js');
-var usersRouter = require('./routes/users.js');
-var testRouter = require('./routes/RoutesTest.js')
+var express = require('express');
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+// [CONFIGURE APP TO USE bodyParser]
+// app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/test', testRouter)
+// // catch 404 and forward to error handler
+// app.use(function(req, res, next) {
+//   next(createError(404));
+// });
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// [ CONFIGURE mongoose ]
+// CONNECT TO MONGODB SERVER
+// var db = mongoose.connection;
+// db.on('error', console.error);
+// db.once('open', function() {
+//   //CONNECTED TO MONGODB SERVER
+//   console.log("Connected to mongod server");
+// });
+
+// Connection URL
+var url = 'mongodb+srv://pmmm114:_sjGHPpi-KMkRc9@cluster0-v9uv1.mongodb.net/mongodb_blockchain?retryWrites=true'
+mongoose.connect(url, { useNewUrlParser: true })
+  .then(() => console.log('Successfully connected to mongodb'))
+  .catch(e => console.error(e));
+
+app.use('/concert', require('./routes/index'));
 
 // error handler
 app.use(function(err, req, res, next) {

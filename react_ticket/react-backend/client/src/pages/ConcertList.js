@@ -1,10 +1,10 @@
 import React from 'react'
 import PageTemplate from '../components/base/PageTemplate';
-import ConcertListWrapper from '../components/concertlist/ConcertListWrapper'
+import ConcertApp from '../container/concertlist/ConcertApp'
 
 const Main = () => (
     <PageTemplate>
-        <ConcertListWrapper/>
+        <ConcertApp/>
     </PageTemplate>
 )
 

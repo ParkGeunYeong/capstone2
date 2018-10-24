@@ -8,7 +8,7 @@ class HeaderNavCollapse extends Component {
             <Navbar.Collapse>
                 <Nav>
                     <NavItem componentClass={Link} href="/" to="/">Home</NavItem>
-                    <NavItem componentClass={Link} href="/test" to="/test">공연목록</NavItem>
+                    <NavItem componentClass={Link} href="/concert" to="/concert">공연목록</NavItem>
                     <NavItem componentClass={Link} href="/" to="/">티켓거래</NavItem>
                     <NavItem componentClass={Link} href="/" to="/">마이페이지</NavItem>
                 </Nav>

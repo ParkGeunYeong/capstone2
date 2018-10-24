@@ -8,7 +8,7 @@ class SingleBlogTop extends Component {
         return (
             <div className="single_blog_top">
                 <a href = "/">
-                <img src={blog_img}/>
+                    <img src={blog_img}/>
                 </a>
                 <SingleBlogTopBtn/>
                 <SingleBlogTopMark/>
