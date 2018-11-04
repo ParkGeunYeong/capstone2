@@ -6,7 +6,7 @@ class SingleConcertContent extends Component {
         return (
             <div className="col-sm-9">
                 <h2 className="concert-name">
-                    <a>라보엠</a>
+                    <a href="/test">라보엠</a>
                 </h2>
                 <p>서귀포예술의전당</p>
                 <p>2018. 11. 16(금)~17(토))</p>

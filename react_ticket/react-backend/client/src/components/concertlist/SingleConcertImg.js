@@ -5,7 +5,7 @@ class SingleConcertImg extends Component {
     render() {
         return (
             <div className="col-sm-3">
-                <img src={blog_img}/>
+                <img src={blog_img} alt="temp"/>
             </div>
         )
     }

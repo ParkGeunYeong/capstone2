@@ -6,7 +6,7 @@ import img from '../../img/index_6_hero_area_bg_1.jpg';
 
 const createCarouselItem = (index, options = {}) => (
     <div key={index} className="hero_area_item">
-        <img src={img}/>
+        <img src={img} alt="temp"/>
         <div className="hero_area_text">
             <div className="hero_area_table">
                 <div className="hero_area_table_cell">

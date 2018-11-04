@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 
 class HeaderNavToggle extends Component {
     render() {
