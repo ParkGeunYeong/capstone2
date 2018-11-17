@@ -16,8 +16,8 @@ class ConcertApp extends Component {
             pageArray : [],
         };
     }
-
-    componentDidMount() {
+    
+    UNSAFE_componentWillMount() {
         fetch('/concert')
           .then(res => res.json())
           .then(concerts => this.setState({ concerts }));
