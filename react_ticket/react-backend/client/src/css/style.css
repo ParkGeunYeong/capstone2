@@ -81,11 +81,13 @@ textarea:focus, input:focus{
     padding-bottom: 70px;
 }
 /* ============== this code is for concertlist page============== */
-.row-bottom-padding {
-    padding-bottom: 50px;
+.row-padding {
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 .concert-name {
     padding-bottom: 15px;
+    padding-top: 15px;
 }
 /* ============== ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ ============== */
 .padding_top {
@@ -164,11 +166,43 @@ textarea:focus, input:focus{
 /*-----------------------------------------------------------------------------------*/
 /*    2.2     header_bottom CSS
 /*-----------------------------------------------------------------------------------*/
+/* modify */
 .header_bottom .mainmenu ul.nav.navbar-nav {
     text-align: left;
     float: none;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
+    padding-top:19px; 
+    /* padding modify*/
 }
+.paginate {
+    margin-top: 30px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+.paginate a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #bbb;
+    background: url(../img/spr_paging.png) 0px 0px no-repeat;
+    background-size: 120px 90px;
+    line-height: 30px;
+    margin: 0 3px 0 2px;
+}
+.paginate a:hover {
+    background: url(../img/spr_paging.png) 0px -60px no-repeat;
+    background-size: 120px 90px;
+    color: #fff;
+}
+.paginate .btn_num.select {
+    background: url(../img/spr_paging.png) 0px -60px no-repeat;
+    background-size: 120px 90px;
+    color: #fff;
+}
+/* modify */
 .header_bottom .mainmenu ul.nav.navbar-nav li {
     float: none;
     display: inline-block;
@@ -177,7 +211,7 @@ textarea:focus, input:focus{
 }
 .header_bottom .mainmenu ul.nav.navbar-nav li a {
     color: #161616;
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
 }
@@ -234,16 +268,17 @@ textarea:focus, input:focus{
 .header_social_icon form input[type="search"] {
     background: rgba(0, 0, 0, 0) url("../img/search.png") no-repeat scroll 0 5px;
     border: medium none;
-    padding: 3px 10px;
+    padding: 0px 10px;
     text-indent: -9999px;
+    line-height: 25px;
     width: 20px;
     cursor: pointer;
     color: #2b2b2b;
 }
 .header_social_icon form input[type="search"]:focus {
-    width: 180px;
+    width: 200px;
     text-indent: 0;
-    background: none repeat scroll 0 5px #eeeeee;
+    background: none repeat scroll 0 5px #fcfcfc;
 }
 
 /* this code is for sub-menu */
@@ -1513,6 +1548,10 @@ body.preloader_active {
                 For Tablet layout
 ============================================== */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* css modify*/
+    .index_six .header_social_icon {
+        padding: 29px 0;
+    }
     /* default Css */
     .blog_headings {
         font-size: 24px;
@@ -1526,7 +1565,7 @@ body.preloader_active {
         padding: 0 11px 0;
     }
     .header_bottom .mainmenu ul.nav.navbar-nav {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     .header_bottom .mainmenu ul.nav.navbar-nav li:hover ul.sub-menu {
         top: 100%;
@@ -1748,7 +1787,7 @@ body.preloader_active {
     .header_bottom .mainmenu ul.nav.navbar-nav li a {
         border-bottom: 1px solid #e1e1e1;
         font-size: 14px;
-        padding: 10px 0;
+        padding: 0px 0px 15px 0px;
         text-align: center;
         color: #161616;
         display: block;
@@ -2023,7 +2062,7 @@ body.preloader_active {
         text-align: center;
     }
     /* ============== this code is for concertlist page============== */
-    .row-bottom-padding {
+    .row-padding {
         padding-bottom: 50px;
     }
     .concert-name {
