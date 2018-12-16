@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderArea from '../header/HeaderArea'
+import HeaderArea from '../container/hedaer/HeaderArea'
 const PageTemplate = ({header, children}) => (
     <div className="index_six">
         <HeaderArea/>

@@ -10,6 +10,9 @@ const routes = [
             const UserActions = bindActionCreators(userActions, dispatch);
             return UserActions.getUsers();
         }
+    },
+    {
+        path: '/trade'
     }
 ];
 

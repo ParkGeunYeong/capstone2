@@ -1,20 +1,23 @@
 const express = require('express');
 const app = express();
-const render = require('./render/index');
+const path = require('path');
+const ssr = require('./render/index');
+const router = express.Router();
+const PORT = 3001;
 
-app.use(express.static(__dirname+'/../build'));
-app.get('*', async (req, res, next) => {
-    try {
-      var page = await render.renderPage(req);
-      console.log(page);
-      return res.send(page);
-    } catch(err) {
-      next(err); // error
-    }
+const distPath = path.resolve(__dirname+'/../build');
+
+app.use('^/static', express.static(path.resolve(distPath, 'static')));
+
+router.use('*', async (req, res) => {
+    page = await ssr(req); 
+    return res.send(page);
   }
 );
+
+app.use(router);
   
-  app.listen(3001, function () {
-    console.log('listening on port 3001!');
+  app.listen(PORT, function () {
+    console.log(`listening on port ${PORT}!`);
   });
   

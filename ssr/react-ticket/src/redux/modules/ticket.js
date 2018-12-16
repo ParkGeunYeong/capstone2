@@ -5,7 +5,7 @@ import { applyPenders } from 'redux-pender';
 import * as api from 'lib/api';
 
 // 액션 타입
-const POST_TICKETS = 'users/GET_USERS';
+const POST_TICKETS = 'ticket/POST_TICKETS';
 
 // 액션 생성자
 export const buyTickets = createAction(POST_TICKETS, api.createReservation);

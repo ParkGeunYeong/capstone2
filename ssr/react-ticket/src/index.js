@@ -11,4 +11,6 @@ import './static/css/bootstrap.min.css'
 import './static/css/venobox.css'
 import './static/css/style.css'
 
-ReactDOM.hydrate (<Root />, document.getElementById('root'));
+const render = window.__PRELOADED_STATE__ ? ReactDOM.hydrate : ReactDOM.render;
+
+render (<Root />, document.getElementById('root'));

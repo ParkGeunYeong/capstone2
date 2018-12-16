@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { withRouter } from 'react-router-dom';
 
 import * as usersActions from '../../../redux/modules/users';
 import * as pagesActions from '../../../redux/modules/paginate';
@@ -13,12 +14,9 @@ import SingleConcertContent from '../../concertlist/SingleConcertContent';
 import PaginateBox from '../../concertlist/PaginateBox';
 
 class ConcertApp extends Component {
-    componentWillMount() {
-        // 서버사이드에서도 데이터 로딩이 작동하기 위해서, 데이터 불러오는 작업을 componentWillMount 에서 호출합니다.
-        const { UsersActions, PagesActions, query, data, done, currentPage } = this.props;
-        console.log("componentWillMount currentPage : "+currentPage);
-
-        console.log("componentWillMount data : "+data);
+    initialize = async () => {
+        const { UsersActions } = this.props;
+        await UsersActions.getUsers();
     }
 
     componentDidMount() {
@@ -37,7 +35,8 @@ class ConcertApp extends Component {
         const { TradeActions } = this.props;
         const ticket = "org.example.ticket.Ticket#string";
         const newOwner = "org.example.ticket.User#customer01";
-        TradeActions.buyTickets(ticket, newOwner);
+        const test={ticket,newOwner};
+        TradeActions.buyTickets(test);
     }
     render() {
         const { handlePageNumber, handleButtonMore } = this;
@@ -66,6 +65,7 @@ class ConcertApp extends Component {
 
         return (
             <ConcertListWrapper>
+                <h2>Test</h2>
                 {concertList}
                 <PaginateBox onClick={handlePageNumber}/>
             </ConcertListWrapper>
@@ -73,7 +73,7 @@ class ConcertApp extends Component {
     }
 }
 
-export default connect(
+export default withRouter(connect(
     (state) => ({
         data: state.users.data,
         currentPage: state.paginate.currentPage,
@@ -85,4 +85,4 @@ export default connect(
         PagesActions: bindActionCreators(pagesActions, dispatch),
         TradeActions: bindActionCreators(tradeActions, dispatch)
     })
-)(ConcertApp);
+)(ConcertApp));
