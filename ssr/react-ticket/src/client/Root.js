@@ -6,11 +6,11 @@ import { Provider } from 'react-redux';
 import store from '../redux/store';
 
 const Root = () => (
-    <BrowserRouter>
-        <Provider store={store}>
+    <Provider store={store}>
+        <BrowserRouter>
             <App/>
-        </Provider> 
-    </BrowserRouter>
+        </BrowserRouter>
+    </Provider>
 );
 
 export default Root;
