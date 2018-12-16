@@ -7,3 +7,4 @@ export const createReservation = ({ticket, newOwner}) => axios.post('http://211.
     "newOwner": newOwner
   }
 ).then( response => {console.log(response)}).catch(response => {console.log(response)});
+export const sendAuth = () => (console.log("실행"));

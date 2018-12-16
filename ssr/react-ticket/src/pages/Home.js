@@ -1,13 +1,13 @@
 import React, {Component} from 'react'
 import PageTemplate from '../components/base/PageTemplate';
-import LandingTemplateContainer from '../components/container/landing/LandingTemplateContainer';
+import LandingTemplateContainer from '../components/container/auth/LandingTemplateContainer';
 import Main from '../components/container/main/Main';
 
 class Home extends Component {
     render() {
         return (
             <PageTemplate>
-                <LandingTemplateContainer />
+                <LandingTemplateContainer/>
                 <Main />
             </PageTemplate>
         );
