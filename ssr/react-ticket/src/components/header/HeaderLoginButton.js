@@ -3,9 +3,9 @@ import React from 'react';
 
 // import { Button } from 'reactstrap';
 
-const HeaderLoginButton = ({onLogin}) => {
+const HeaderLoginButton = ({onLogin, test}) => {
     return (
-        <button onClick={onLogin}>Login</button>
+        <button onClick={onLogin}>{test}</button>
     );
 };
 

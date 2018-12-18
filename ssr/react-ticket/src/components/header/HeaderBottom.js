@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HeaderMainMenu from './HeaderMainMenu';
-import HeaderSocialIcon from './HeaderSocialIcon'
+import HeaderSocialIcon from '../container/hedaer/HeaderSocialIcon';
 
 class HeaderBottom extends Component {
     render() {

@@ -1,17 +1,19 @@
-import { createAction, handleActions } from 'redux-actions';
+ import { createAction, handleActions } from 'redux-actions';
 import produce from 'immer';
 import { applyPenders } from 'redux-pender';
 
 import * as api from 'lib/api';
 // 액션 타입
 const SET_LOGIN_INPUT = 'auth/SET_ID_INPUT';
-// const SET_PW_INPUT = 'auth/SET_PW_INPUT';
-const SEND_AUTH = 'auth/SEND_AUTH'
+const GET_TOKEN = 'auth/GET_TOKEN';
+const SET_RESET_TOKENDATA = 'auth/SET_RESET_TOKENDATA';
+const SET_TOKEN = 'auth/SET_TOKEN';
 
 // 액션 생성자
 export const setLoginInput = createAction(SET_LOGIN_INPUT);
-// export const setPwInput = createAction(SET_PW_INPUT);
-export const sendAuth = createAction(SEND_AUTH, api.sendAuth);
+export const setRestTokenData = createAction(SET_RESET_TOKENDATA);
+export const getToken = createAction(GET_TOKEN, api.getToken);
+export const setToken = createAction(SET_TOKEN);
 
 // 초기 상태
 const initialState = {
@@ -19,7 +21,12 @@ const initialState = {
         id:'',
         pw:'',
     },
-    sentEmail: false
+    tokenData: {
+        auth: false,
+        token: null,
+    },
+    sentEmail: false,
+
 };
 
 const reducer = handleActions({
@@ -29,18 +36,25 @@ const reducer = handleActions({
             draft.loginForm[name]=value;
         });
     },
-    // [SET_PW_INPUT]: (state, action) => {
-    //     return produce(state, (draft) => {
-    //         draft.pw=action.payload;
-    //     });
-    // },
+    [SET_RESET_TOKENDATA]: (state) => {
+        return produce(state, (draft) => {
+            draft.tokenData={auth: false, token: null};
+        });
+    },
+    [SET_TOKEN]: (state, action) => {
+        const {auth, token} = action.payload.data;
+        return produce(state, (draft) => {
+            draft.tokenData = { auth, token };
+            console.log({ auth, token });
+        })
+    }
 }, initialState);
 
 export default applyPenders(reducer, [{
-    type: SEND_AUTH,
+    type: GET_TOKEN,
     onSuccess: (state, action) => {
         return produce(state, (draft) => {
-            draft.sentEmail = true;
+            draft.tokenData = action.payload;
         });
     }
 }]);

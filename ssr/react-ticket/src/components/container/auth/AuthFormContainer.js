@@ -18,15 +18,21 @@ class AuthFormContainer extends Component {
     console.log("pw : "+loginForm.pw);
   }
 
+  onClick = () => {
+    const { AuthActions, loginForm } = this.props;
+    AuthActions.getToken(loginForm).then(AuthData => {AuthActions.setToken(AuthData)});
+  }
+
   render() {
-    const { onChange } = this;
-    const { loginForm, sentEmail } = this.props;
+    const { onChange, onClick } = this;
+    const { loginForm } = this.props;
 
     return (
       <AuthForm
         id={loginForm.id}
         pw={loginForm.pw}
         onChange={onChange}
+        onClick={onClick}
       />
     );
   }
@@ -35,6 +41,7 @@ class AuthFormContainer extends Component {
 export default withRouter(connect(
   (state) => ({
       loginForm: state.auth.loginForm,
+      tokenData: state.auth.tokenData,
       sentEmail: state.auth.sentEmail
   }),
   (dispatch) => ({
